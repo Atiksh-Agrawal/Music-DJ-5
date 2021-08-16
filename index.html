@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>MUSIC AI DJ WEB APP</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.0.0/p5.js"></script>
+
+  <script src="https://unpkg.com/ml5@0.4.3/dist/ml5.min.js"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.4.0/addons/p5.sound.min.js"></script>
+
+
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>
+<center>
+  	<h1 class="header btn ">AI DJ WEB APP
+	    <br>
+	    <span>NOTE - Move your left-hand wrist to play Peter Pan Theme song.<br>
+            NOTE - Move your right-hand wrist to play Harry Potter Theme song.<br><br>
+            NOTE - Move your left-hand wrist up and down for increasing and decreasing the volume.<br>
+        Move your right-hand wrist up and down for increasing and decreasing the speed
+      </span>
+  	</h1>
+  <br><br>
+
+  <div class="speed">
+    <img src="data:image/jpeg;base64,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" class="divImg">
+    <br>
+    <h2 id="speed_value" class="btn btn-danger">Harry Potter Theme Song</h2>
+  </div>
+
+  <div class="volume">
+    <img src="https://lumiere-a.akamaihd.net/v1/images/p_peterpan_19755_96e77c5b.jpeg" class="divImg">
+    <br>
+    <h2 id="volume_value" class="btn btn-danger">Peter Pan Theme Song</h2>
+  </div>
+  <button onclick="playMusic()" class="btn btn-success btn-lg">Play Music</button>
+  <button onclick="stopMusic()" class="btn btn-danger btn-lg">Stop Music</button>
+  <br><br>
+  <h3 id="song_name"  class="btn btn-danger">Song playing:</h3>
+  <br><br>
+  <select id="name">
+    <option value="harry_potter">Harry Potter Theme Remix</option>
+    <option value="peter_pan">Peter Pan</option>
+  </select>
+</center>
+
+<script src="main.js"></script>
+</body>
+</html>

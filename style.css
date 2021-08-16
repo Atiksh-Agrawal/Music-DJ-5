@@ -1,0 +1,75 @@
+body{
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRjoRIp9P4_OKK9HC0EWQ9nSnEMAFWoB6f7WQ&usqp=CAU");
+  background-size: cover;
+}
+
+.header{
+    font-size: 25px;
+    background-color: yellow;
+    width:90%;
+    height: 250px;
+   padding:10px;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-name: shadow-effect;
+}
+
+.header span{
+   color: red;
+}
+
+.btn-lg{
+    height: 50px;
+    width: 150px;
+    font-size: 20px;
+    text-align: center;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-name: shadow-effect;
+}
+
+.speed{
+    float: left;
+}
+
+.divImg{
+    height: 300px;
+    width: 300px;
+    border-radius: 200px;
+}
+
+#speed_value , #volume_value{
+    font-size: 25px;
+    margin: 15px;
+}
+
+.volume{
+    float: right;
+}
+
+@keyframes shadow-effect{
+    0%{
+      box-shadow: 5px 5px 20px red;
+    }
+
+    25%{
+      box-shadow:5px 5px 20px yellow;
+    }
+
+    50%{
+      box-shadow:5px 5px 20px green;
+    }
+
+    75%{
+      box-shadow:5px 5px 20px skyblue;
+    }
+
+    100%{
+      box-shadow: violet;
+    }
+  }
+
+  #name{
+    width: 25%;
+    font-size: 30px;
+  }
